@@ -1,0 +1,46 @@
+@import './../../theme/colors.scss';
+@import './../../theme/variables.scss';
+@import './../../theme/globals.scss';
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 343px;
+    height: 52px;
+    left: 29px;
+    top: 378px;
+    outline: none;
+    cursor: pointer;
+    margin: 100px;
+}
+
+.buttonContainer:hover{
+  transform: scale(1.1);
+}
+
+.LargeButton{
+  &__text{
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.7em;
+    line-height: .5em;
+    color: $color-text-large-button;
+  }
+  &__background{
+    @extend .buttonContainer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: $color-large-button-primary;
+    box-shadow: 0px 4px 4px $color-element-shadow;
+    border-radius: 6px;
+  }
+}
