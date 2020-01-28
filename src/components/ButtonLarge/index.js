@@ -1,16 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ButtonLarge.scss';
 
-const ButtonLarge = () => {
+const ButtonLarge = ( { text }) => {
   return (
-    <div
-      className="LargeButton"
-    >
-      <button className="LargeButton__background" type="button">
-        <p className="LargeButton__text">Iniciar sesión</p>
-      </button>
-    </div>
+        <button className="LargeButton__background" type="button">
+          <span className="LargeButton__text">{text}</span>
+        </button>
   );
+};
+
+ButtonLarge.propTypes={
+  text: PropTypes.string.isRequired
 };
 
 export default ButtonLarge;

@@ -2,45 +2,35 @@
 @import './../../theme/variables.scss';
 @import './../../theme/globals.scss';
 
-.buttonContainer {
+.LargeButton{
+  &__background{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    width: 343px;
+    position: relative;
+    margin: auto;
+    width: 85%;
     height: 52px;
-    left: 29px;
-    top: 378px;
+    top: 9%;
+    bottom: 6.8%;
     outline: none;
     cursor: pointer;
-    margin: 100px;
-}
+    background: $color-large-button-primary;
+    box-shadow: 0px 4px 4px $color-element-shadow;
 
-.buttonContainer:hover{
-  transform: scale(1.1);
-}
-
-.LargeButton{
+    border-radius: 6px;
+  }
   &__text{
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
-    font-size: 1.7em;
+    font-size: 1.4em;
     line-height: .5em;
-    color: $color-text-large-button;
+    color: $color-text-enabled-button;
+    text-transform: capitalize;
   }
-  &__background{
-    @extend .buttonContainer;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    background: $color-large-button-primary;
-    box-shadow: 0px 4px 4px $color-element-shadow;
-    border-radius: 6px;
-  }
+}
+button:hover, :active{
+  transform: scale(0.995);
 }

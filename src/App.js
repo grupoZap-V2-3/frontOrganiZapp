@@ -2,7 +2,7 @@ import React from 'react';
 
 const App = () => (
   <main>
-    App wrapper
+      App wrapper
   </main>
 );
 

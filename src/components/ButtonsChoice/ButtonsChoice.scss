@@ -1,0 +1,73 @@
+@import './../../theme/colors.scss';
+@import './../../theme/variables.scss';
+@import './../../theme/globals.scss';
+
+.choiceBtnsWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: auto;
+}
+.ChoiceBtn {
+  display: flex;
+  flex-direction: row;
+  min-width: 150px;
+  width: auto;
+  height: 40px;
+  border: none;
+  border-radius: 200px;
+  box-shadow: $box-shadow;
+  font-weight: 500;
+  font-size: .875em;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.75px;
+  text-transform: capitalize;
+  &__enabled {
+    @extend .ChoiceBtn;
+    background-color: $color-choice-button-enabled;
+    color: $color-text-enabled-button;
+  }
+  &__disabled {
+    @extend .ChoiceBtn;
+    background-color: $color-choice-button-disabled;
+    color: $color-text-disabled-button;
+    margin-right: 10%;
+  }
+}
+button:hover{
+  transform: scale(1.050);
+}
+button:active{
+  transform: scale(1.050);
+}
+.circleIconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -0.5em 0 auto -0.5em;
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: $box-shadow;
+  position: relative;
+  &__danger-action{
+    @extend .circleIconWrapper;
+    background-color: $color-danger-action;
+  }
+  &__caution-action{
+    @extend .circleIconWrapper;
+    background-color: $color-alert;
+  }
+  &__confirm-action{
+    @extend .circleIconWrapper;
+    background-color: $color-success;
+  }
+}
+.choiceText{
+    margin:auto;
+}
+.MuiSvgIcon-root.icon{
+  color: $color-icon-primary;
+  font-size: 1.75em;
+}
