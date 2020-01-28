@@ -1,11 +1,16 @@
 @import './../../theme/colors.scss';
 @import './../../theme/variables.scss';
 
-body {
+body{
   background-attachment: $color-background-primary;
   font-family: $font-family-primary;
   font-weight: normal;
   margin: 0;
   padding: 0;
   line-height: 1;
+}
+button{
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
