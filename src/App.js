@@ -1,9 +1,8 @@
 import React from 'react';
+import AppRouter from './AppRouter';
 
 const App = () => (
-  <main>
-      App wrapper
-  </main>
+  <AppRouter />
 );
 
 export default App;
