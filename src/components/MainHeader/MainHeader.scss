@@ -1,0 +1,89 @@
+@import './../../theme/colors.scss';
+@import './../../theme/variables.scss';
+@import './../../theme/globals.scss';
+
+.MainHeader{
+  background-color: $color-primary;
+  display: flex; 
+  justify-content: center; 
+  min-height: 135px;
+  margin: 0;
+  color: $color-text-negative;
+  &-contentWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 100vw;
+    height: 70px;
+    background-color: $color-headline-header;
+    padding: 1.8rem;
+    clip-path: polygon(0 5%, 100% 25%, 100% 75%, 0 95%);
+  }
+  &-userGreet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    text-align: left;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    &__salute{
+      font-size: 1.9em;
+    }
+    &__userRole{
+      font-size: 1.3em;
+    }
+  }
+}
+.whiteLogo{
+  height: 2.7em;
+  margin: 0 1em .5em;
+}
+//Media queries
+//Tablet
+@media only screen 
+and (min-width : $tablet-min){
+  .MainHeader{
+    min-height: 155px;
+    &-contentWrapper{
+      margin-top: 0.6em;
+      clip-path: polygon(0 0%, 100% 25%, 100% 75%, 0 95%);
+    }
+    &-userGreet{
+      &__salute{
+        font-size: 2.2em;
+      }
+      &__userRole{
+        font-size: 1.7em;
+      }
+    }
+  }
+  .whiteLogo{
+    height: 4.5em;
+  }
+}
+//Desktop
+@media only screen 
+and (min-width : $desktop-min){
+  .MainHeader{
+    min-height: 155px;
+    &-contentWrapper{
+      min-width: 83.619vw;
+      clip-path: polygon(0 0%, 100% 25%, 100% 75%, 0 95%);
+    }
+    &-userGreet{
+      &__salute{
+        font-size: 2.5em;
+      }
+      &__userRole{
+        font-size: 1.8em;
+      }
+    }
+  }
+  .whiteLogo{
+    height: 5em;
+  }
+}

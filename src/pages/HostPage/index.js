@@ -1,7 +1,10 @@
 import React from 'react';
+import MainHeader from '../../components/MainHeader';
 
 const HostPage = () => (
-  <h1>HOST</h1>
+  <MainHeader 
+  userRole="Anfitrión" 
+/>
 );
 
 export default HostPage;
