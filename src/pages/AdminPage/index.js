@@ -1,7 +1,10 @@
 import React from 'react';
+import MainHeader from '../../components/MainHeader';
 
 const AdminPage = () => (
-  <h1>ADMINISTRATOR</h1>
+  <MainHeader 
+    userRole="Administrador" 
+  />
 );
 
 export default AdminPage;
