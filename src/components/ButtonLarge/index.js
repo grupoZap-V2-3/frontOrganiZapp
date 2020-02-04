@@ -4,7 +4,7 @@ import './ButtonLarge.scss';
 
 const ButtonLarge = ( { text }) => {
   return (
-    <button className="LargeButton LargeButton__background" type="submit">
+    <button className="LargeButton__background" type="submit">
       <span className="LargeButton__text">{text}</span>
     </button>
   );
