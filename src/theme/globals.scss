@@ -2,7 +2,9 @@
 @import './../../theme/variables.scss';
 
 body{
-  background-attachment: $color-background-primary;
+  display: flex;
+  justify-content: center;
+  background-color: $color-background-primary;
   font-family: $font-family-primary;
   font-weight: normal;
   margin: 0;

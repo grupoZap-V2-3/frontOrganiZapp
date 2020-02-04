@@ -5,6 +5,7 @@ import NotFoundPage from '../pages/NotFoundPage';
 import HomePage from '../pages/HomePage';
 import HostPage from '../pages/HostPage';
 import AdminPage from '../pages/AdminPage';
+import ChangePasswordPage from '../pages/ChangePasswordPage';
 
 const AppRouter = () => (
     <Router>
@@ -14,6 +15,7 @@ const AppRouter = () => (
           <Route path="/login" component={LoginPage} />
           <Route path="/admin" component={AdminPage} />
           <Route path="/host" component={HostPage} />
+          <Route path="/change-pass" component={ChangePasswordPage} />
           <Route path="*/" component={NotFoundPage} />
         </Switch>
       </main>
