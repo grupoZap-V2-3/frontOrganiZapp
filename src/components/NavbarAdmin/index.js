@@ -41,35 +41,6 @@ const NavbarAdmin = () => {
       </div>
     </nav>
   );
-}
+};
 
 export default NavbarAdmin;
-
-/*
-<nav className="AdminNav">
-      <Link className="AdminNav-navBack">
-        <IconButton>
-            <NavigateBeforeOutlinedIcon className="backIcon"/>
-        </IconButton>
-      </Link>
-      <h2 className="AdminNav-title">EVENTOS</h2>
-      <div className="AdminNav-rightBtnsWrapper">
-        <Link>
-          <IconButton>
-            <div className="IconCircle-notification">
-              <Badge badgeContent={1} color="error">
-                <NotificationsNoneOutlinedIcon className="navIcon"/>
-              </Badge>
-            </div>
-          </IconButton>
-        </Link>
-        <Link>
-          <IconButton>
-            <div className="IconCircle-addEvent">
-              <AddOutlinedIcon className="navIcon"/>
-            </div>
-          </IconButton>
-        </Link>
-      </div>
-    </nav>
-*/
