@@ -1,0 +1,71 @@
+@import './../../theme/colors.scss';
+@import './../../theme/variables.scss';
+@import './../../theme/globals.scss';
+
+.ChangePassContentWrapper{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  color: $color-icon-secondary;
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+  width: 300px;
+}
+
+//Mui override
+div.MuiInput{
+  &-underline{
+    border-bottom: $color-icon-secondary;
+
+    &:before{
+      border-bottom-color: $color-icon-secondary;
+    }
+    &:after{
+      border-bottom-color: $color-icon-secondary
+    }
+
+  }
+  &-underline:hover:not(.Mui-disabled):before{
+    border-bottom-color: $color-icon-secondary;
+  }
+}
+div.MuiInputBase-root{
+  color: $color-text-base;
+  font-family: $font-family-primary;
+  font-weight: 500;
+}
+//END-Mui override
+
+.footer{
+      display: flex;
+      min-height: 180px;
+      justify-content: center;
+}
+
+//Media query's
+
+//Tablet
+@media screen and (min-width: $tablet-min){
+  .ChangePassContentWrapper{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.MuiGrid-container{
+    justify-content: center;
+  }
+
+  .footer{
+    min-height: 260px;
+  }
+}
+//Desktop
+@media screen and (min-width: $desktop-min) {
+
+  .footer{
+    min-height: 280px;
+  }
+}

@@ -1,0 +1,18 @@
+@import '../../theme/globals.scss';
+@import '../../theme/colors.scss';
+@import '../../theme/variables.scss';
+
+.MainFooterContainer{
+  height: auto;
+  width: auto;
+  font-family: $font-family-footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heartLogo{
+  margin-top: 3px;
+  width: 30px;
+  margin: 0 1em;
+}
