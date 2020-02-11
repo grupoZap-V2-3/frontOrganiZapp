@@ -1,0 +1,53 @@
+@import './../../theme/colors.scss';
+@import './../../theme/variables.scss';
+@import './../../theme/globals.scss';
+
+.HostNav{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: -1px;
+  min-width: 90vw;
+  background-color: $color-title-bar;
+  color: $color-text-base;
+  box-shadow: inset $box-shadow;
+  &-btnWrapper{
+    height: 3.5em;
+    width: 3.5em;
+    margin: 0 1% 0 10%;
+    &__navBack{
+      display: none;
+    }
+  }
+  &-title{
+    width: 80vw;
+    font-size: 1.25em;
+    font-weight: 600;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+}
+svg.MuiSvgIcon-root.backIcon{
+  color: $color-icon-secondary;
+  font-size: 1.35em;
+}
+//Tablet
+@media only screen 
+and (min-width : $tablet-min){
+  .HostNav{
+    &-navBack{
+      margin: 0 1% 0 13%;
+    }
+  }
+}
+//Desktop
+@media only screen 
+and (min-width : $desktop-min){
+  .HostNav{
+    &-navBack{
+      margin: 0 1% 0 14.5%;
+    }
+  }
+}
