@@ -21,6 +21,3 @@ const NavbarHost = ( {title} ) => {
 }
 
 export default NavbarHost;
-/*
-
-*/
