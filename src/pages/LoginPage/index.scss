@@ -9,7 +9,7 @@
   background-image: url("../../theme/images/body_360x478.png");
   background-repeat: no-repeat;
   min-width: 414px;;
-  height: 552px;
+  height: 551px;
 }
 
 .LoginHeaderContent{
@@ -19,11 +19,9 @@
   height: 80px;
   align-items: center;
   margin-left: 11px;
-
   &-logo{
     height: 70px;
   }
-
   &-text{
     font-size: 1.6em; 
     color: $color-text-negative;
@@ -35,11 +33,11 @@
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
+  height: 300px;
+  width: 300px;
   color: $color-icon-primary;
   margin-left: 65px;
-  height: 400px;
-  width: 300px;
-
+  padding-bottom: 60px;
   &-forgotPassword{
     color: $color-text-secondary;
     &:hover, :active{
@@ -48,75 +46,52 @@
   }
 }
 
-//Mui override
-div.MuiInput{
-  &-underline{
-    border-bottom: $color-icon-primary;
-
-    &:before{
-      border-bottom-color: $color-icon-primary;
-    }
-    &:after{
-      border-bottom-color: $color-icon-primary;
-    }
-
-  }
-  &-underline:hover:not(.Mui-disabled):before{
-    border-bottom-color: $color-icon-primary;
-  }
-}
-div.MuiInputBase-root{
-  color: $color-text-base;
-  font-family: $font-family-primary;
-  font-weight: 500;
-}
-//END-Mui override
-
 .LoginFooter{
   display: flex;
   position: absolute;
   justify-content: center;
   bottom: 0;
   min-width: 415px;
-
   &-logo{
     bottom: 0;
     width: 80px;
     height: 116px;
   }
-
+  @media screen and (max-height: 552px){
+    position: static;
+  }
 }
-
 //Media query's
 //Desktop
-@media screen and (min-width: 992px){
+@media screen and (min-width: $tablet-min){
   .LoginHeader{
-    background-image: url("../../theme/images/body_1366x768px.png");
     min-width: 100vw;
     height: 100vh;
   }
   .LoginHeaderContent{
-    height: 230px;
-
+    padding: 10px;
+    height: 300px;
+    margin-top: 1%;
     &-logo{
       height: 90px;
     }
-  
     &-text{
         font-size: 4.2em;
     }
   }
-
   .LoginFormWrapper{
     width: 400px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  div.MuiGrid-container{
-    justify-content: center;
+    margin-top: (auto - 20%);
+    margin-bottom: auto;
   }
   .LoginFooter{
+    position: absolute;
+    justify-content: center;
+    @media screen and (max-height: 552px){
+      position: static;
+    }
     &-logo{
       width: 120px;
       height: 164px;
@@ -124,4 +99,27 @@ div.MuiInputBase-root{
     } 
   }
 }
-
+@media screen and (min-width: $desktop-min){
+  .LoginHeader{
+    background-image: url("../../theme/images/body_1366x768px.png");
+  }
+  .LoginHeaderContent{
+    height: 260px;
+    align-items: center;
+    margin-top: 2%;
+    &-logo{
+      height: 100px;
+    }
+    &-text{
+        font-size: 4.4em;
+    }
+  }
+  .LoginFormWrapper{
+    padding-bottom: 200px;
+  }
+  .LoginFooter{
+    @media screen and (max-height: 552px){
+      position: static;
+    }
+  }
+}
