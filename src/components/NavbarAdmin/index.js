@@ -8,16 +8,22 @@ import Badge from '@material-ui/core/Badge';
 import IconButton from '@material-ui/core/IconButton';
 import './NavbarAdmin.scss';
 
-const NavbarAdmin = () => {
+const noBackRoutes = [
+  '/admin'
+];
+
+const NavbarAdmin = ({ location }) => {
+  const { pathname } = location;
+  const displayBackButtton = !noBackRoutes.includes(pathname);
   return (
     <nav className="AdminNav">
-      <div className="AdminNav-btnWrapper">
+      {displayBackButtton && <div className="AdminNav-btnWrapper">
         <Link className="AdminNav-btnWrapper__navBack">
           <IconButton>
               <NavigateBeforeOutlinedIcon className="backIcon"/>
           </IconButton>
         </Link>
-      </div>
+      </div>}
       <p className="AdminNav-title">EVENTOS</p>
       <div className="AdminNav-rightBtnsWrapper">
         <div className="AdminNav-rightBtnsWrapper__container">

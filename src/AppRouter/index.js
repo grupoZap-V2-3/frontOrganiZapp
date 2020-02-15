@@ -9,7 +9,7 @@ import ChangePasswordPage from '../pages/ChangePasswordPage';
 
 const AppRouter = () => (
     <Router>
-      <main>
+      <>
         <Switch>
           <Route path="/" exact component={HomePage} /> 
           <Route path="/login" component={LoginPage} />
@@ -18,7 +18,7 @@ const AppRouter = () => (
           <Route path="/change-pass" component={ChangePasswordPage} />
           <Route path="*/" component={NotFoundPage} />
         </Switch>
-      </main>
+      </>
     </Router>
 );
 
