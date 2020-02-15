@@ -3,11 +3,9 @@ import './index.scss';
 import MainHeader from '../../components/MainHeader';
 import ButtonLarge from '../../components/ButtonLarge';
 import MainFooter from '../../components/MainFooter';
-import { Link } from 'react-router-dom';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
+import { TextField, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { LockOpen, VisibilityOff } from '@material-ui/icons';
+import { LockOpen } from '@material-ui/icons';
 
 const useStyles = makeStyles(theme => ({
   textField: {

@@ -11,10 +11,12 @@
 # production
 /build
 
+#Environment
+.env
+
 #Firebase Config
 
 #Firebase Cache
-
 
 # misc
 .DS_Store

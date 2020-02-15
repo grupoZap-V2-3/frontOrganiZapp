@@ -1,0 +1,45 @@
+@import './../../theme/colors.scss';
+@import './../../theme/variables.scss';
+@import './../../theme/globals.scss';
+
+.loginFormContent{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  padding-bottom: 30px;
+}
+//Mui override
+div.MuiInput{
+  &-underline{
+    border-bottom: $color-icon-primary;
+    &:before{
+      border-bottom-color: $color-icon-primary;
+    }
+    &:after{
+      border-bottom-color: $color-icon-primary;
+    }
+  }
+  &-underline:hover:not(.Mui-disabled):before{
+    border-bottom-color: $color-icon-primary;
+  }
+}
+label.MuiFormLabel-root.Mui-focused{
+  color: $color-text-negative;
+}
+div.MuiInputBase-root{
+  color: $color-text-base;
+  font-family: $font-family-primary;
+  font-weight: 500;
+}
+p.MuiFormHelperText-root{
+  color: $color-danger-action;
+}
+
+@media screen and (min-width: $tablet-min){
+  div.MuiGrid-container{
+    justify-content: center;
+  }
+}
