@@ -1,7 +1,8 @@
 import React from 'react';
+import UnderConstruction from './../../components/UnderConstruction'
 
 const WelcomePage = () => (
-  <h1>WELCOME</h1>
+  <UnderConstruction/>
 );
 
 export default WelcomePage;

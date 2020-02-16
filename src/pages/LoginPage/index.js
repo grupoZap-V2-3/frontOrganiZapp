@@ -18,7 +18,7 @@ const LoginPage = () => {
         {/* Form */}
         <LoginForm />
         <div>
-          {/* Forgot Password Link */}
+          {/* Forgot Password Link TODO: change link redirection when available */}
           <Link to="/change-pass" className="LoginFormWrapper-forgotPassword" //Change link to forgot when available
             style={{ 
               textDecoration: 'none',

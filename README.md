@@ -22,3 +22,11 @@ $ npm run start
 ```
 $ npm run build
 ```
+
+# Rutas con contenido
+Continuamos trabajando en la funcionalidad de los flujos principales de la aplicación, por lo tanto los contenidos son más bien vistas sin funcionalidad.
+Las rutas que muestran "contenido" son:
+    /login
+    /admin
+    /host
+    /change-pass

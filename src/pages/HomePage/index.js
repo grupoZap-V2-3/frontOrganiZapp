@@ -1,8 +1,9 @@
 import React from 'react';
+import UnderConstruction from './../../components/UnderConstruction'
 
 const HomePage = () => (
   <>
-    <h1>HOME</h1>
+    <UnderConstruction/>
   </>
 );
 
