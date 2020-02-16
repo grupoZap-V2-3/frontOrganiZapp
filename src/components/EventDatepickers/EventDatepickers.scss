@@ -1,0 +1,24 @@
+@import './../../theme/colors.scss';
+@import './../../theme/variables.scss';
+@import './../../theme/globals.scss';
+
+.DateWrapper{
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+.DatePicker{
+  grid-column: 1/3;
+}
+.startTime{
+  grid-column: 1/2;
+}
+.endTime{
+  grid-column: 2/3;
+}
+.MuiTextField-root.timePicker{
+  grid-gap: 2em;
+}

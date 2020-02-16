@@ -1,14 +1,18 @@
 import React from 'react';
 import MainHeader from '../../components/MainHeader';
 import NavbarAdmin from '../../components/NavbarAdmin';
+import EventInfoForm from '../../components/EventInfoForm';
 
-const AdminPage = () => (
-  <header>
+const AdminPage = ({ location }) => (
+  <main>
     <MainHeader 
-    userRole="Administrador" 
+      userRole="Administrador" 
     />
-    <NavbarAdmin/>
-  </header>
+    <NavbarAdmin location={location}/>
+    <EventInfoForm 
+      btnText="Continuar"
+    />
+  </main>
 );
 
 export default AdminPage;
