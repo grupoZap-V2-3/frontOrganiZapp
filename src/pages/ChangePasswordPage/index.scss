@@ -2,6 +2,15 @@
 @import './../../theme/variables.scss';
 @import './../../theme/globals.scss';
 
+.passwordFormContent{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  padding-bottom: 30px;
+}
 .ChangePassContentWrapper{
   display: flex;
   justify-content: space-evenly;
