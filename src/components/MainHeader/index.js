@@ -5,19 +5,19 @@ import './MainHeader.scss';
 
 const whiteLogo = require('../../theme/images/logo_white.png')
 
-const MainHeader = ( { userRole }) => {
-  const salute= "Hola";
+const MainHeader = ({ userRole, adittionalInfo, salute }) => {
 
   return (
     <header className="MainHeader">
       <div className="MainHeader-contentWrapper">
-        <img src={whiteLogo} alt="App Logo" className="whiteLogo"/>
+        <img src={whiteLogo} alt="App Logo" className="whiteLogo" />
         <div className="MainHeader-userGreet">
-          <span className="MainHeader-userGreet__salute">{ salute }</span>
-          <span className="MainHeader-userGreet__userRole">{ userRole }</span>
+          <span className="MainHeader-userGreet__salute">{salute}</span>
+          <span className="MainHeader-userGreet__userRole">{userRole}</span>
+          <span className="MainHeader-userGreet__userInfo">{adittionalInfo}</span>
         </div>
         <MainMenu
-          menuItem2="Cambiar Contraseña"
+        // menuItem2="Cambiar Contraseña"
         />
       </div>
     </header>
