@@ -1,8 +1,9 @@
 import React from 'react';
 import UnderConstruction from './../../components/UnderConstruction'
 
+//Is this page really neccesary?? Check
 const WelcomePage = () => (
-  <UnderConstruction/>
+  <UnderConstruction />
 );
 
 export default WelcomePage;

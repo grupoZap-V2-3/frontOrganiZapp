@@ -12,7 +12,7 @@ const noBackRoutes = [
   '/admin'
 ];
 
-const NavbarAdmin = ({ location }) => {
+const NavbarAdmin = ({ location, handleOpenModal }) => {
   const { pathname } = location;
   const displayBackButtton = !noBackRoutes.includes(pathname);
   return (
@@ -20,7 +20,7 @@ const NavbarAdmin = ({ location }) => {
       {displayBackButtton && <div className="AdminNav-btnWrapper">
         <Link className="AdminNav-btnWrapper__navBack">
           <IconButton>
-              <NavigateBeforeOutlinedIcon className="backIcon"/>
+            <NavigateBeforeOutlinedIcon className="backIcon" />
           </IconButton>
         </Link>
       </div>}
@@ -31,21 +31,21 @@ const NavbarAdmin = ({ location }) => {
             <IconButton>
               <div className="IconCircle-notification">
                 <Badge badgeContent={1} color="error">
-                  <NotificationsNoneOutlinedIcon className="navIcon"/>
+                  <NotificationsNoneOutlinedIcon className="navIcon" />
                 </Badge>
               </div>
             </IconButton>
           </Link>
           <Link>
-            <IconButton>
+            <IconButton onClick={handleOpenModal}>
               <div className="IconCircle-addEvent">
-                <AddOutlinedIcon className="navIcon"/>
+                <AddOutlinedIcon className="navIcon" />
               </div>
             </IconButton>
           </Link>
         </div>
       </div>
-    </nav>
+    </nav >
   );
 };
 

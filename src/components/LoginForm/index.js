@@ -3,6 +3,8 @@ import './index.scss';
 import { TextField, Grid, makeStyles } from '@material-ui/core';
 import { EmailOutlined, LockOutlined } from '@material-ui/icons';
 import ButtonLarge from '../ButtonLarge';
+import { Link } from 'react-router-dom';
+import { validateEmail, validatePassword } from './../../services/validations';
 
 const useStyles = makeStyles(theme => ({
   textField: {
@@ -24,14 +26,15 @@ const LoginForm = () => {
     e.preventDefault();
     // const { isValid: isPasswordValid, errorMessage: passwordErrorMessage } = validatePassword(passwordValue);
     // const { isValid: isEmailValid, errorMessage: emailErrorMessage } = validateEmail(emailValue);
-    // if(!isEmailValid || !isPasswordValid) {
+    // if (!isEmailValid || !isPasswordValid) {
     //   setEmailHelperText(emailErrorMessage);
     //   setPasswordHelperText(passwordErrorMessage);
+    //   e.preventDefault();
     // }
   }
 
   return (
-    <form onSubmit={handleSubmitForm} className="loginFormContent">
+    <form className="loginFormContent" onSubmit={handleSubmitForm}>
       <Grid container spacing={1} alignItems="flex-end">
         <Grid item>
           <EmailOutlined />
@@ -64,8 +67,11 @@ const LoginForm = () => {
         </Grid>
       </Grid>
       {/* Submit Button */}
-      <ButtonLarge text="Iniciar Sesión" />
-    </form>
+      {/* Correct functionality to only allowed users */}
+      <Link to='/admin' >
+        <ButtonLarge text="Iniciar Sesión" />
+      </Link>
+    </form >
   );
 }
 

@@ -4,8 +4,8 @@ import './PopupChoice.scss';
 import Modal from '@material-ui/core/Modal';
 
 
-
-const ModalPopup = ({modalTitle})=>  {
+//Change to Alert Dialog (M-UI)
+const ModalPopup = ({ modalTitle }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -35,7 +35,7 @@ const ModalPopup = ({modalTitle})=>  {
   );
 }
 
-ModalPopup.propTypes={
+ModalPopup.propTypes = {
   modalTitle: PropTypes.string.isRequired
 }
 export default ModalPopup;
