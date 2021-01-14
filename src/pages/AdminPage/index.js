@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MainHeader from '../../components/MainHeader';
 import NavbarAdmin from '../../components/NavbarAdmin';
 import EventModal from '../../components/EventModal';
+import NavTabs from '../../components/TabsNavBar';
 
 const AdminPage = ({ location }) => {
 
@@ -22,6 +23,7 @@ const AdminPage = ({ location }) => {
       />
       <NavbarAdmin location={location} handleOpenModal={handleOpenModal} />
       {/* <Eventos Activos/Archivo menu component> */}
+      <NavTabs />
       <EventModal open={open} handleCloseModal={handleCloseModal} />
     </main>
   )
