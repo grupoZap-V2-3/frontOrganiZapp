@@ -1,0 +1,12 @@
+@import '../../theme/globals.scss';
+
+.PrivateTabIndicator-colorSecondary-104{
+  &.MuiTabs-indicator{
+    background-color: rgba(237, 186, 17, 0.86);
+  }
+}
+.MuiTab{
+  &-wrapper{
+    font-family: $font-family-primary;
+  }
+}

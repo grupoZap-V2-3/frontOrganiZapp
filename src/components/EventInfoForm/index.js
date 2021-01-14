@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import TextField from '@material-ui/core/TextField';
 import EventDatepickers from "./../EventDatepickers";
 import './EventInfoForm.scss';
+import { TextField } from '@material-ui/core';
 
 
 const EventInfoForm = ({ btnText }) => {
-//Inputs setters
-  const [eventName,setEventName] = useState('');
+  //Inputs setters
+  const [eventName, setEventName] = useState('');
   const [eventDescription, setEventDescription] = useState('');
   const [eventLocation, setEventLocation] = useState('');
 
-//Handlers
+  //Handlers
   const handleSubmit = (e, eventName, eventDescription) => {
     e.preventDefault();
     console.log("eventName: " + eventName)
@@ -21,19 +21,19 @@ const EventInfoForm = ({ btnText }) => {
   }
 
   return (
-    <form 
+    <form
       className="EventFormWrapper"
-      onSubmit={handleSubmit} 
+      onSubmit={handleSubmit}
       noValidate autoComplete="off"
     >
-      <TextField 
-        id="EventName" 
+      <TextField
+        id="EventName"
         label="Nombre del Evento"
         value={eventName}
         onChange={(e) => setEventName(e.target.value)}
         size="small"
       />
-      <TextField 
+      <TextField
         id="EventDescription"
         label="Descripción del Evento"
         value={eventDescription}
@@ -43,8 +43,8 @@ const EventInfoForm = ({ btnText }) => {
       <div>
         <EventDatepickers />
       </div>
-      <TextField 
-        id="EventLocation" 
+      <TextField
+        id="EventLocation"
         label="Lugar del Evento"
         value={eventLocation}
         onChange={(e) => setEventLocation(e.target.value)}

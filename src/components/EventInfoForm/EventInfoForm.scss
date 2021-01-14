@@ -3,12 +3,12 @@
 @import './../../theme/globals.scss';
 
 .EventFormWrapper {
+  width: auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: 1em;
   grid-row-gap: 1.5em;
-  padding: 3vh 20vw;
 }
 .ContinueBtn{
   display: flex;
@@ -44,9 +44,6 @@ label.MuiFormLabel-root.Mui-focused{
 //Tablet
 @media only screen 
 and (min-width : $tablet-min){
-  .EventFormWrapper {
-    padding: 10vh 28vw;
-  }
   .ContinueBtn{
     width: 25vw;
     margin-top: 3em;
@@ -56,7 +53,7 @@ and (min-width : $tablet-min){
 @media only screen 
 and (min-width : $desktop-min){
   .EventFormWrapper {
-    padding: 10vh 20vw;
+    min-width: 450px;
   }
   .ContinueBtn{
     width: 20vw;
