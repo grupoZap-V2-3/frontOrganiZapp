@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles, useTheme, createMuiTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -41,16 +41,6 @@ function a11yProps(index) {
   };
 }
 
-// const customTheme = createMuiTheme({
-//   overrides: {
-//     MuiTabs: {
-//       PrivateTabIndicator: {
-//         backgroundColor: 'secondary'
-//       }
-//     }
-//   }
-// })
-
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
@@ -59,9 +49,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.4em',
     fontFamily: 'Montserrat',
   },
-  // indicator: {
-  //   backgroundColor: '#1890ff',
-  // },
   tabs: {
     color: '#484848',
   },
@@ -90,10 +77,11 @@ export default function NavTabs() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="default">
+      <AppBar position="static" color="default" >
         <Tabs
-          // theme={customTheme}
-          className={classes.indicator}
+          // Changing a specific Mui component style with a css class
+          classes={{ indicator: 'tabIndicator color' }}
+          //
           value={value}
           onChange={handleChange}
           textColor='#484848'
