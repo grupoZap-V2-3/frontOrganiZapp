@@ -14,14 +14,11 @@ const LoginPage = () => {
         <img src={headerLogo} alt="headerLogo" className="LoginHeaderContent-logo" />
         <h1 className="LoginHeaderContent-text">Bienvenid@</h1>
       </div>
+      {/* Form */}
       <div className="LoginFormWrapper">
-        {/* Form */}
         <LoginForm />
         <div>
-          {/* Forgot Password Link TODO: change link redirection when available */}
-          {/* 1-Check if the email is registred/valid user 
-            2-Send an email message with a link to change pass page */}
-          <Link to="/change-pass" className="LoginFormWrapper-forgotPassword"
+          <Link to="/forgot-password" className="LoginFormWrapper-forgotPassword"
             style={{
               textDecoration: 'none',
             }}>

@@ -8,7 +8,7 @@
   background-size: cover;
   background-image: url("../../theme/images/body_360x478.png");
   background-repeat: no-repeat;
-  min-width: 414px;;
+  min-width: 414px;
   height: 551px;
 }
 
@@ -16,9 +16,9 @@
   justify-content: space-evenly;
   margin-top: 32px;
   display: flex;
-  height: 80px;
+  height: 15%;
   align-items: center;
-  margin-left: 11px;
+
   &-logo{
     height: 70px;
   }
@@ -34,7 +34,7 @@
   flex-direction: column;
   align-items: center;
   height: 300px;
-  width: 300px;
+  width: fit-content;
   color: $color-icon-primary;
   margin-left: 65px;
   padding-bottom: 60px;
@@ -51,7 +51,7 @@
   position: absolute;
   justify-content: center;
   bottom: 0;
-  min-width: 415px;
+  min-width: 414px;
   &-logo{
     bottom: 0;
     width: 80px;
@@ -65,13 +65,13 @@
 //Desktop
 @media screen and (min-width: $tablet-min){
   .LoginHeader{
-    min-width: 100vw;
-    height: 100vh;
+    min-width: 94vmin;
+    height: 94vh;
   }
   .LoginHeaderContent{
     padding: 10px;
-    height: 300px;
-    margin-top: 1%;
+    height: 19%;
+    margin-top: 4%;
     &-logo{
       height: 90px;
     }
@@ -83,7 +83,7 @@
     width: 400px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: (auto - 20%);
+    margin-top: 10%;
     margin-bottom: auto;
   }
   .LoginFooter{
@@ -101,10 +101,12 @@
 }
 @media screen and (min-width: $desktop-min){
   .LoginHeader{
+    width: 100vw;
+    height: 100vh;
     background-image: url("../../theme/images/body_1366x768px.png");
   }
   .LoginHeaderContent{
-    height: 260px;
+    height: 36%;
     align-items: center;
     margin-top: 2%;
     &-logo{
@@ -115,7 +117,9 @@
     }
   }
   .LoginFormWrapper{
-    padding-bottom: 200px;
+    margin-top: 2%;
+    padding-bottom: 90px;
+    margin-bottom: 10vh;
   }
   .LoginFooter{
     @media screen and (max-height: 552px){

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './ButtonLarge.scss';
 
-const ButtonLarge = ( { text }) => {
+const ButtonLarge = ({ text }) => {
   return (
     <button className="LargeButton__background" type="submit">
       <span className="LargeButton__text">{text}</span>
@@ -10,7 +10,7 @@ const ButtonLarge = ( { text }) => {
   );
 };
 
-ButtonLarge.propTypes={
+ButtonLarge.propTypes = {
   text: PropTypes.string.isRequired
 };
 

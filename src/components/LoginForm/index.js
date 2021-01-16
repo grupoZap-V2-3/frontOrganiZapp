@@ -68,8 +68,11 @@ const LoginForm = () => {
       </Grid>
       {/* Submit Button */}
       {/* Correct functionality to only allowed users */}
-      <Link to='/admin' >
-        <ButtonLarge text="Iniciar Sesión" />
+      <Link to='/admin' style={{ textDecoration: 'none' }}>
+        <ButtonLarge
+
+          text="Iniciar Sesión"
+        />
       </Link>
     </form >
   );
